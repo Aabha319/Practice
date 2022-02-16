@@ -1,0 +1,92 @@
+
+remove duplicate dictionary
+Case 0:
+test_list = [{"Akash" : 1}, {"Kil" : 2}, {"Akshat" : 3}, {"Kil" : 2}, {"Akshat" : 3}] 
+  
+# printing original list  
+print (test_list)
+  
+# using naive method to  
+# remove duplicates  
+res_list = [] 
+for i in range(len(test_list)): 
+    if test_list[i] not in test_list[i + 1:]: 
+        res_list.append(test_list[i]) 
+  
+# printing resultant list 
+print (res_list)
+
+Case 1:
+We are saving dictionaries in list
+here, dict 2 & 3 are same.
+so it will exclude dict 3
+
+Case 2: 
+if there is slight chnage in any dict 2 and dict 3 
+it will print the dictionary
+
+list_of_students = []
+student_data1 = {
+        'name' : 'Romil',
+        'eng_marks' : [50, 55, 60, 43, 44],
+        'maths_marks' : [88, 99, 87, 90, 80, 88, 90],
+        'science_marks' : [33, 34, 36, 36, 38, 60, 50, 65, 56, 54], 
+}
+list_of_students.append(student_data1)
+
+student_data2 = {
+        'name' : 'Ved',
+        'eng_marks' : [66, 55, 60, 43, 44],
+        'maths_marks' : [88, 120, 87, 90, 80, 88, 90],
+        'science_marks' : [33, 34, 36, 49, 123, 60, 50, 65, 56, 54], 
+}
+list_of_students.append(student_data2)
+
+student_data3 = {
+        'name' : 'Ved',
+        'eng_marks' : [66, 55, 60, 43, 44],
+        'maths_marks' : [88, 120, 87, 90, 80, 88, 90],
+        'science_marks' : [33, 34, 36, 49, 123, 60, 50, 65, 56, 54], 
+}
+list_of_students.append(student_data3)
+res_list = [] 
+for i in range(len(list_of_students)): 
+    if list_of_students[i] not in list_of_students[i + 1:]: 
+        res_list.append(list_of_students[i]) 
+  
+# printing resultant list 
+print (res_list)
+
+Case 3:
+
+Creating nested dictionary
+
+student_data = {'id1': 
+   {'name': ['Sara'], 
+    'class': ['V'], 
+    'subject_integration': ['english, math, science']
+   },
+ 'id2': 
+  {'name': ['David'], 
+    'class': ['V'], 
+    'subject_integration': ['english, math, science']
+   },
+ 'id3': 
+    {'name': ['Sara'], 
+    'class': ['V'], 
+    'subject_integration': ['english, math, science']
+   },
+ 'id4': 
+   {'name': ['Surya'], 
+    'class': ['V'], 
+    'subject_integration': ['english, math, science']
+   },
+}
+
+result = {}
+
+for key,value in student_data.items():
+    if value not in result.values():
+        result[key] = value
+
+print(result)
