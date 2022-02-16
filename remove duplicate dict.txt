@@ -1,5 +1,17 @@
+#frequency of characters
+def frequency(str1):
+    dict = {}
+    for n in str1:
+        keys = dict.keys()
+        if n in keys:
+            dict[n] += 1
+        else:
+            dict[n] = 1
+    return dict
+str1=input("enter a string ")
+print(frequency(str1))
 
-remove duplicate dictionary
+#remove duplicate dictionary
 Case 0:
 test_list = [{"Akash" : 1}, {"Kil" : 2}, {"Akshat" : 3}, {"Kil" : 2}, {"Akshat" : 3}] 
   
